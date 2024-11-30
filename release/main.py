@@ -9,8 +9,8 @@ from PyQt6.QtWidgets import QMainWindow, QWidget, QTableWidgetItem
 class MyWidget(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('main.ui', self)
-        self.db = sqlite3.connect('coffee.sqlite')
+        uic.loadUi('UI/main.ui', self)
+        self.db = sqlite3.connect('data/coffee.sqlite')
         self.cur = self.db.cursor()
         self.loadTable()
         self.nextForm.clicked.connect(self.goToNextForm)
@@ -43,8 +43,8 @@ class AddCoffee(QWidget):
     def __init__(self, ms):
         super().__init__()
         self.ms = ms
-        uic.loadUi('addEditCoffeeForm.ui', self)
-        self.db = sqlite3.connect('coffee.sqlite')
+        uic.loadUi('UI/addEditCoffeeForm.ui', self)
+        self.db = sqlite3.connect('data/coffee.sqlite')
         self.cur = self.db.cursor()
         self.save.clicked.connect(self.click)
 
