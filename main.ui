@@ -14,9 +14,16 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QTableWidget" name="tableWidget"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="nextForm">
+      <property name="text">
+       <string>Добавить / Изменить</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
